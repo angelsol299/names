@@ -17,9 +17,7 @@ const App = () => {
             onChange={e => setName(e.target.value)}
           />
         </p>
-        <p>
-          Age: <input type="text" placeholder="enter your age" />
-        </p>
+
         <p>Age {age}</p>
         <p>Name: {name}</p>
         <br />
