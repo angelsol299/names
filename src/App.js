@@ -10,15 +10,22 @@ const App = () => {
     <div className="App">
       <header className="App-header">
         <p>
-          Name: <input type="text" placeholder="enter your name" />
+          Name:{" "}
+          <input
+            type="text"
+            placeholder="enter your name"
+            onChange={e => setName(e.target.value)}
+          />
         </p>
         <p>
-          Age:
-          <input type="text" placeholder="enter your age" />
+          Age: <input type="text" placeholder="enter your age" />
         </p>
-        <button>Increment Age by 1</button>
+        <p>Age {age}</p>
+        <p>Name: {name}</p>
         <br />
-        <button>Decrement Age by 1</button>
+        <button onClick={() => setAge(age + 1)}>Increment Age by 1</button>
+        <br />
+        <button onClick={() => setAge(age - 1)}>Decrement Age by 1</button>
       </header>
     </div>
   );
